@@ -1,0 +1,57 @@
+<div class="container-fluid my-2">
+  <h3>Registration</h3>
+
+  <div class="row">
+    <div class="col-12 col-md-6 mt-3">
+      <div class="card">
+        <div class="card-body">
+          <h4>User Form</h4>
+          <form [formGroup]="regForm" novalidate>
+            <div class="mt-2">
+              <div class="col-md-12">
+                <label for="name-id" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name-id" formControlName="name">
+                <div
+                  *ngIf="regForm.controls['name'].invalid && (regForm.controls['name'].dirty || regForm.controls['name'].touched)"
+                  class="is-invalid text-danger">
+                  Name is invalid.
+                </div>
+              </div>
+              <div class="col-md-12">
+                <label for="designation-id" class="form-label">Designation</label>
+                <input type="text" class="form-control" id="designation-id" formControlName="designation">
+                <div
+                  *ngIf="regForm.controls['designation'].invalid && (regForm.controls['designation'].dirty || regForm.controls['designation'].touched)"
+                  class="is-invalid text-danger">
+                  Designation is invalid.
+                </div>
+              </div>
+              <div class="col-md-12">
+                <label for="address-id" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address-id" formControlName="address">
+                <div
+                  *ngIf="regForm.controls['address'].invalid && (regForm.controls['address'].dirty || regForm.controls['address'].touched)"
+                  class="is-invalid text-danger">
+                  Address is invalid.
+                </div>
+              </div>
+              <div class="col-md-12">
+                <label for="email-id" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email-id" formControlName="email">
+                <div
+                  *ngIf="regForm.controls['email'].invalid && (regForm.controls['email'].dirty || regForm.controls['email'].touched)"
+                  class="is-invalid text-danger">
+                  Email is invalid.
+                </div>
+              </div>
+            </div>
+            <button type="submit" [disabled]="regForm.pristine || regForm.invalid" class="btn btn-primary mt-3">
+              Submit
+            </button>
+          </form>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

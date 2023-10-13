@@ -1,0 +1,14 @@
+<div class="card">
+    <img [src]="courseItem.image" class="card-img-top" height="200" alt="...">
+    <div class="card-body border-top">
+        <p class="card-title lead">
+            {{courseItem.title}}
+        </p>
+        <p class="card-text">
+            {{courseItem.desc}}
+        </p>
+    </div>
+    <div class="card-footer">
+        <a class="btn btn-primary float-end" [routerLink]="courseItem.link" routerLinkActive="active">View Course</a>
+    </div>
+</div>
